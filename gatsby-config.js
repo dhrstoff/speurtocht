@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Jolien's grote speurtocht`,
     description: `Een super leuke verjaardag speurtocht!`,
-    author: `@gatsbyjs`,
+    author: `Eelco Bosklopper`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -19,19 +19,20 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `Jolien's Speurtocht`,
         short_name: `Jolien's speurtocht`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        background_color: `#911191`,
+        theme_color: `#911191`,
+        display: `standalone`,
+        icon: `src/images/magic-book.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
   ],
 }
