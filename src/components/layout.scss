@@ -1,3 +1,6 @@
+@import "./variables.scss";
+// @import url("https://fonts.googleapis.com/css?family=Caveat&display=swap");
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -7,8 +10,11 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #494848;
-  color: #fff;
+  background-image: url($noise);
+  background-color: #ebd5b3;
+  min-height: 100vh;
+  padding-bottom: 3rem;
+  font-family: "Caveat", cursive, sans-serif;
 }
 article,
 aside,
@@ -202,7 +208,6 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -232,8 +237,6 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -623,8 +626,16 @@ pre tt:after {
   }
 }
 
-
 @font-face {
   font-family: magicFont;
-  src: url('../fonts/MagicSchool.ttf');
+  src: url("../fonts/MagicSchool.ttf");
+}
+
+@font-face {
+  font-family: Caveat;
+  src: url("../fonts/Caveat-Regular.ttf");
+}
+
+p {
+  font-size: 1.4rem;
 }

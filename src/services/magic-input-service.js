@@ -6,28 +6,70 @@ const globalOptionList = [
     url: "witches/jolien",
   },
   {
+    name: "britt",
+    url: "witches/britt",
+  },
+  {
+    name: "aniek",
+    url: "witches/aniek",
+  },
+  {
+    name: "claartje",
+    url: "witches/claartje",
+  },
+  {
+    name: "jessica",
+    url: "witches/jessica",
+  },
+  {
+    name: "eva",
+    url: "witches/eva",
+  },
+  {
+    name: "anja",
+    url: "witches/anja",
+  },
+  {
+    name: "roos",
+    url: "witches/roos",
+  },
+  {
+    name: "cauldron",
+    url: null,
+  },
+  {
+    name: "love",
+    url: null,
+  },
+  {
+    name: "tooth",
+    url: null,
+  },
+  {
+    name: "parceltongue",
+    url: null,
+  },
+  {
+    name: "bubble",
+    url: null,
+  },
+  {
     name: "alohomora",
     url: "spells/alohomora",
   },
 ]
 
-// "bubble",
-//     "cauldron",
-//     "love",
-//     "tooth",
-//     "parceltongue",
-
-export function magic(inputValue, optionList = [], response) {
+export function magic(inputValue, optionList = [], url) {
   let cleanInputValue = inputValue.replace(/\s+/g, "").toLowerCase()
 
-  if (optionList.length && optionList.contains(cleanInputValue)) {
-    navigate(cleanInputValue)
+  if (optionList.length && optionList.includes(cleanInputValue)) {
+    navigate(url)
   } else {
     const value = globalOptionList.find(key => key.name === cleanInputValue)
     if (value) {
       navigate(value.url)
     } else {
-      return response || false
+      return false
     }
   }
 }

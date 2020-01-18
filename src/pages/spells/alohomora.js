@@ -7,7 +7,7 @@ import SEO from "../../components/seo"
 const Alohomora = () => (
   <Layout>
     <SEO title="Alohomora" />
-    <h1>Hoi Jolien!</h1>
+    <h1>Alohomora!</h1>
   </Layout>
 )
 

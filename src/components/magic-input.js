@@ -3,34 +3,35 @@ import { magic } from "../services/magic-input-service"
 
 import "./magic-input.scss"
 
-const MagicInput = () => {
+const MagicInput = ({ allowedSpells, url }) => {
   const [input, setInput] = useState("") // '' is the initial state value
-  let [error, setError] = useState(false) // '' is the initial state value
+  let [error, setError] = useState(false)
 
   function processInput(input) {
-    const magicMissing = magic(input, [], "Nope wrong one")
+    const magicMissing = magic(input, allowedSpells, url)
     if (magicMissing) {
       error = setError(true)
 
-      setTimeout(function() {
+      setTimeout(() => {
         error = setError(false)
       }, 1000)
     }
   }
 
   function handleKeyDown(e) {
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       processInput(input)
     }
   }
 
   return (
-    <div className={`magic-input ${error ? "is-danger" : ""}`}>
+    <div className={`magic-input ${error && "incorrect"}`}>
       <input
         id="magic-input"
         value={input}
         onChange={e => setInput(e.target.value)}
         placeholder=""
+        spellCheck="false"
         onKeyDown={handleKeyDown}
       />
       <button onClick={() => processInput(input)} className="gold-button">

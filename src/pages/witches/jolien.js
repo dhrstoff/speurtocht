@@ -3,11 +3,13 @@ import React from "react"
 
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
+import MagicInput from "../../components/magic-input";
 
 const Jolien = () => (
   <Layout>
     <SEO title="Jolien" />
     <h1>Hoi Jolien!</h1>
+    <MagicInput allowedValues={["alohomora"]} url={"spells/alohomora"}/>
   </Layout>
 )
 

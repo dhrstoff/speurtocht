@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import MagicInput from "../components/magic-input";
 import "./layout.scss"
 
 const Layout = ({ children }) => {
@@ -30,13 +29,8 @@ const Layout = ({ children }) => {
       >
         <main
         style={{
-          minHeight: `80vh`,
         }}>{children}</main>
       </div>
-
-        <footer>
-          <MagicInput />
-        </footer>
     </>
   )
 }

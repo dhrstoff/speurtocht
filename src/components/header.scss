@@ -1,6 +1,13 @@
+@import './variables.scss';
+
 header {
-  background: #911191;
+  background: black;
   margin-bottom: 1.45rem;
+  background-image: url($noise);
+  border-bottom: solid #911191;
+  -moz-box-shadow: 0 0 10px #000000;
+  -webkit-box-shadow: 0 0 10px #000000;
+  box-shadow: 0 0 10px #000000;
 
   h1 {
     color: #fff;
@@ -9,6 +16,6 @@ header {
     text-align: center;
     margin: 0;
     font-size: 2.5rem;
-    text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
+    text-shadow:1px 1px 10px #911191, 1px 1px 10px #911191;
   }
 }

@@ -29,11 +29,5 @@ module.exports = {
         icon: `src/images/magic-book.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
   ],
 }
