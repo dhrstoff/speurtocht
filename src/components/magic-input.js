@@ -3,12 +3,12 @@ import { magic } from "../services/magic-input-service"
 
 import "./magic-input.scss"
 
-const MagicInput = ({ allowedSpells, url }) => {
+const MagicInput = ({ spells }) => {
   const [input, setInput] = useState("") // '' is the initial state value
   let [error, setError] = useState(false)
 
   function processInput(input) {
-    const magicMissing = magic(input, allowedSpells, url)
+    const magicMissing = magic(input, spells)
     if (magicMissing) {
       error = setError(true)
 

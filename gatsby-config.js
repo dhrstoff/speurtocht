@@ -17,11 +17,12 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Jolien's Speurtocht`,
-        short_name: `Jolien's speurtocht`,
+        name: `Jolien's grote Speurtocht`,
+        short_name: `Jolien's grote speurtocht`,
         start_url: `/`,
         background_color: `#911191`,
         theme_color: `#911191`,

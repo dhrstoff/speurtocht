@@ -2,6 +2,10 @@ import { navigate } from "gatsby"
 
 const globalOptionList = [
   {
+    name: "magic",
+    url: "thuis/magic"
+  },
+  {
     name: "jolien",
     url: "witches/jolien",
   },
@@ -59,11 +63,16 @@ const globalOptionList = [
   },
 ]
 
-export function magic(inputValue, optionList = [], url) {
+export function magic(inputValue, optionList = []) {
   let cleanInputValue = inputValue.replace(/\s+/g, "").toLowerCase()
 
-  if (optionList.length && optionList.includes(cleanInputValue)) {
-    navigate(url)
+  if (optionList.length) {
+    const value = optionList.find(key => key.name === cleanInputValue)
+    if (value) {
+      navigate(value.url)
+    } else {
+      return false
+    }
   } else {
     const value = globalOptionList.find(key => key.name === cleanInputValue)
     if (value) {
