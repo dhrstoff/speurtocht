@@ -12,10 +12,13 @@ const IndexPage = () => {
       <SEO title="Home" />
       <h2>To whomever that reads this;</h2>
       <p>
-        I've run out of time. I know the next step will be imprisonment so I won't be able to finish it.
+        I've run out of time. I know the next step will be imprisonment so I
+        won't be able to finish it.
       </p>
       <p>But you might.</p>
-      <p>Use the <b>magic</b> word.</p>
+      <p>
+        Use the <b>magic</b> word.
+      </p>
       <MagicInput />
     </Layout>
   )
