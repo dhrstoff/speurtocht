@@ -28,9 +28,9 @@ const IMustNotTellLies = () => (
   <Layout>
     <SEO title="I must not tell lies." />
     <div>
-      {createText(146)}
-      <span style={{ color: "rgb(76, 7, 19)" }}>I must tell stories. </span>
-      {createText(84)}
+      {createText(23)}
+      <span>I must tell stories. </span>
+      {createText(16)}
     </div>
     <MagicInput spells={inputOptions} />
   </Layout>
