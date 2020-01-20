@@ -61,6 +61,14 @@ const globalOptionList = [
     name: "alohomora",
     url: "spells/alohomora",
   },
+  {
+    name: "lies",
+    url: "underconstruction/wordList",
+  },
+  {
+    name: "goblin",
+    url: "goblin/goblin",
+  },
 ]
 
 export function magic(inputValue, optionList = []) {
