@@ -9,6 +9,7 @@
 * Typography.js aan het werken krijgen
 * Spell pagina maken
 * Witch pagina maken
+* Goblin opruimen, spells eruit enzo
 
 britt
 aniek
