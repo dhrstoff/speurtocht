@@ -42,6 +42,7 @@ const MagicInput = ({ spells }) => {
         onKeyDown={handleKeyDown}
       />
       <button onClick={() => processInput(input)} className="gold-button">
+        {/* Fix me */}
         <i className="ra ra-fairy-wand"></i>
       </button>
     </div>
