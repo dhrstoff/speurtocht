@@ -5,15 +5,22 @@ import "./magic-input.scss"
 
 const MagicInput = ({ spells }) => {
   const [input, setInput] = useState("") // '' is the initial state value
-  let [error, setError] = useState(false)
+  let [validation, setValidation] = useState("")
 
   function processInput(input) {
     const magicMissing = magic(input, spells)
-    if (magicMissing) {
-      error = setError(true)
+
+    if (!magicMissing) {
+      validation = setValidation("incorrect")
 
       setTimeout(() => {
-        error = setError(false)
+        validation = setValidation("")
+      }, 1000)
+    } else {
+      validation = setValidation("correct")
+
+      setTimeout(() => {
+        validation = setValidation("")
       }, 1000)
     }
   }
@@ -25,7 +32,7 @@ const MagicInput = ({ spells }) => {
   }
 
   return (
-    <div className={`magic-input ${error && "incorrect"}`}>
+    <div className={`magic-input ${validation}`}>
       <input
         id="magic-input"
         value={input}

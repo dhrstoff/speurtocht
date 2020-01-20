@@ -70,6 +70,7 @@ export function magic(inputValue, optionList = []) {
     const value = optionList.find(key => key.name === cleanInputValue)
     if (value) {
       navigate(value.url)
+      return true
     } else {
       return false
     }
@@ -77,8 +78,9 @@ export function magic(inputValue, optionList = []) {
     const value = globalOptionList.find(key => key.name === cleanInputValue)
     if (value) {
       navigate(value.url)
+      return true
     } else {
       return false
     }
   }
-}
+} 

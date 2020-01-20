@@ -17,9 +17,12 @@
     background-color: #af0000 !important;
     transition: all 0.5s ease-in-out;
   }
+
+  &.correct {
+    background-color: #146314 !important;
+    transition: all 0.5s ease-in-out;
+  }
 }
-
-
 
 #magic-input {
   display: inline-block;
