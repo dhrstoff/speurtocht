@@ -1,14 +1,37 @@
-import React from "react"
+import React, { useState } from "react"
 
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 
 import MagicInput from "../../components/magic-input"
 
+const options = [
+  {
+    id: "start",
+    startText: "Little goblin crying",
+    negativeText: "Goblin is even sadder now",
+    options: ["glacius"],
+  },
+  {
+    id: "glacius",
+    startText: "The little goblin is enveloped in a massive ice cube. Better fix this quick!",
+    negativeText: "That didn't work. Atleast his sad face can't go down any more due to all the ice..",
+    options: ["end"],
+  },
+  {
+    id: "end",
+    startText: "Hooray!",
+    options: ["start"],
+  },
+]
+
 const inputOptions = [
   {
     name: "orchideous",
     url: "goblin/happygoblin",
+    response: "asdf",
+    options: ["glacius"],
+    onSuccess: "",
   },
   {
     name: "ferula",
@@ -29,9 +52,49 @@ const inputOptions = [
 ]
 
 const SadGoblin = () => {
+  const [input, setInput] = useState("") // '' is the initial state value
+  const [text, setText] = useState("") // '' is the initial state value
+  const [goblinState, setGoblinState] = useState(0) // '' is the initial state value
+
+  function processInput(inputValue) {
+    let cleanInputValue = inputValue.replace(/\s+/g, "").toLowerCase()
+
+    const currentGoblinState = options[goblinState];
+
+    if (currentGoblinState.options.includes(cleanInputValue)) {
+      const value = options.find(item => item.id === cleanInputValue)
+      let newText = text.concat(value.startText)
+
+      setGoblinState(options.findIndex(value => value.id === cleanInputValue))
+      setText(newText)
+    } else {
+      let newText = text.concat(currentGoblinState.negativeText)
+      setText(newText)
+    }
+  }
+
+  function handleKeyDown(e) {
+    if (e.key === "Enter") {
+      processInput(input)
+      setInput("")
+    }
+  }
+
   return (
     <Layout>
       <SEO title="Sad Goblin" />
+      {text}
+
+      <input
+        value={input}
+        onChange={e => setInput(e.target.value)}
+        placeholder=""
+        spellCheck="false"
+        onKeyDown={handleKeyDown}
+      />
+
+      <p>{options[goblinState].id}</p>
+
       <p className="narrative">
         The book flips in the air and lands back on its back!
       </p>
@@ -67,8 +130,10 @@ const SadGoblin = () => {
       <p>
         <b>Obliviate</b> Erase specific memories.
       </p>
-      <p><b>Incendio</b> Produces fire.</p>
-      
+      <p>
+        <b>Incendio</b> Produces fire.
+      </p>
+
       <MagicInput spells={inputOptions} />
     </Layout>
   )
