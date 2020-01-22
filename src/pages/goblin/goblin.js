@@ -7,61 +7,157 @@ import SEO from "../../components/seo"
 
 import "./goblin.scss"
 
-const options = [
+const inputOptions = [
   {
-    id: "start",
-    startText: "Little goblin crying",
-    negativeText: `The little goblin is even sadder now`,
-    options: ["glacius", "incendio", "obliviate", "ferula"],
+    id: "flipendo",
+    startText:
+      "You hit him with a well aimed Flipendo and he flies through the air. He lands on the ground with a large bang and sticks out two middle fingers at you.",
+    negativeText: `The little goblin cusses at you`,
+    options: [
+      {
+        input: "glacius",
+        effect: "glaciusFix",
+      },
+      {
+        input: "incendio",
+        effect: "incendioFix",
+      },
+      {
+        input: "ferula",
+        effect: "ferula",
+      },
+      {
+        input: "flipendo",
+        effect: "flipendo",
+      },
+    ],
   },
   {
     id: "glacius",
     startText:
       "The little goblin is enveloped in a massive ice cube. Better fix this quick!",
     negativeText:
+      "That didn't work. Atleast he cannot swear now due to all the ice..",
+    options: [
+      {
+        input: "incendio",
+        effect: "incendio",
+      },
+    ],
+  },
+  {
+    id: "glaciusFix",
+    startText:
+      "That did the trick! He's laying shivering on the flow but it seems you have his attention now!",
+    negativeText:
       "That didn't work. Atleast his sad face can't go down any more due to all the ice..",
-    options: ["incendio"],
+    options: [
+      {
+        input: "glacius",
+        effect: "glacius",
+      },
+      {
+        input: "incendio",
+        effect: "incendio",
+      },
+      {
+        input: "obliviate",
+        effect: "obliviate",
+      },
+    ],
   },
   {
     id: "incendio",
     startText:
       "You shoot a fire bolt at him; It blows up in his face and he is now on fire. Well you have his attention now..",
+    negativeText: `The little goblin let's out a scream that could curdle blood.`,
+    options: [
+      {
+        input: "incendio",
+        effect: "incendioFix",
+      },
+    ],
+  },
+  {
+    id: "incendioFix",
+    startText:
+      "The fire bolt melts the ice block away. He seems more attentive now!",
+    negativeText: `The little goblin cusses at you`,
+    options: [
+      {
+        input: "incendio",
+        effect: "incendio",
+      },
+      {
+        input: "flipendo",
+        effect: "flipendo",
+      },
+      {
+        input: "obliviate",
+        effect: "obliviate",
+      },
+    ],
+  },
+  {
+    id: "ferula",
+    startText:
+      "The bandages can't find any wounds so they wrap around his head, making him unable to speak.",
     negativeText:
-      "That didn't work. Atleast his sad face can't go down any more due to all the ice..",
-    options: ["glacius"],
+      "You think the little goblin is cussing but you can't really understand him with all the bandages",
+    options: [
+      {
+        input: "relashio",
+        effect: "relashio",
+      },
+      {
+        input: "incendio",
+        effect: "incendioFix",
+      },
+    ],
+  },
+  {
+    id: "relashio",
+    startText:
+      "The bandages break free from his head but he looks even more displeased now.",
+    negativeText: `The little goblin cusses at you`,
+    options: [
+      {
+        input: "glacius",
+        effect: "glacius",
+      },
+      {
+        input: "incendio",
+        effect: "incendio",
+      },
+      {
+        input: "ferula",
+        effect: "ferula",
+      },
+      {
+        input: "flipendo",
+        effect: "flipendo",
+      },
+    ],
+  },
+  {
+    id: "obliviate",
+    startText:
+      "A blank look comes over the face of the little goblin. He stares at you curiously.",
+    negativeText:
+      "The little gobln hickups. It seems a snot bell is forming under his nose. He is staring at you now.",
+    options: [
+      {
+        input: "orchideous",
+        effect: "orchideous",
+      },
+    ],
   },
   {
     id: "orchideous",
-    startText: "Hooray!",
+    startText: "Hooray! You've won!",
     options: [],
   },
 ]
-
-// const inputOptions = [
-//   {
-//     name: "orchideous",
-//     url: "goblin/happygoblin",
-//     response: "asdf",
-//     options: ["glacius"],
-//     onSuccess: "",
-//   },
-//   {
-//     name: "ferula",
-//     url: "goblin/tiedupgoblin",
-//   },
-//   {
-//     name: "glacius",
-//     url: "goblin/frozengoblin",
-//   },
-//   {
-//     name: "obliviate",
-//     url: "goblin/confusedgoblin",
-//   },
-//   {
-//     name: "flipendo",
-//     url: "goblin/startledgoblin",
-//   },
-// ]
 
 const SadGoblin = () => {
   const [input, setInput] = useState("") // '' is the initial state value
@@ -69,24 +165,28 @@ const SadGoblin = () => {
   const [goblinState, setGoblinState] = useState(0) // '' is the initial state value
 
   function processInput(inputValue) {
-    let cleanInputValue = inputValue.replace(/\s+/g, "").toLowerCase()
+    const cleanInputValue = inputValue.replace(/\s+/g, "").toLowerCase()
+    const currentGoblinState = inputOptions[goblinState]
+    const inputInOptions = currentGoblinState.options.find(
+      item => item.input === cleanInputValue
+    )
 
-    const currentGoblinState = options[goblinState]
+    if (inputInOptions) {
+      const value = inputOptions.find(item => item.id === inputInOptions.effect)
+      updateNarrative(cleanInputValue, value.startText)
 
-    if (currentGoblinState.options.includes(cleanInputValue)) {
-      const value = options.find(item => item.id === cleanInputValue)
-      let newText = text.concat(
-        `<i>${cleanInputValue}!</i><p>${value.startText}</p>`
+      setGoblinState(
+        inputOptions.findIndex(value => value.id === inputInOptions.effect)
       )
-
-      setGoblinState(options.findIndex(value => value.id === cleanInputValue))
-      setText(newText)
     } else {
-      let newText = text.concat(
-        `<i>${cleanInputValue}!</i><p>${currentGoblinState.negativeText}</p>`
-      )
-      setText(newText)
+      updateNarrative(cleanInputValue, currentGoblinState.negativeText)
     }
+  }
+
+  function updateNarrative(inputValue, description) {
+    let newText = text.concat(`<i>${inputValue}!</i><p>${description}</p>`)
+
+    setText(newText)
   }
 
   function handleKeyDown(e) {
@@ -99,16 +199,16 @@ const SadGoblin = () => {
   return (
     <Layout>
       <SEO title="Sad Goblin" />
-      {/* {text} */}
       <div className="goblin">
         <p className="narrative">
           The book flips in the air and lands back on its back!
         </p>
         <p className="narrative">
-          On the next page you see a small goblin with one arm over his face.
-          You hear soft crying. Maybe you can help the little fella with some
-          handy magic by writing it on the dotted line?
+          On the next page you see a cute small goblin. He's seems to be
+          actively ignoring you. Maybe you can get the little fella's attention
+          with some handy magic by writing it on the dotted line!
         </p>
+        <br />
 
         <div
           className="dialog"
@@ -122,6 +222,7 @@ const SadGoblin = () => {
           spellCheck="false"
           onKeyDown={handleKeyDown}
         />
+        {goblinState}
 
         <h1>Spells</h1>
         <p>
@@ -136,9 +237,9 @@ const SadGoblin = () => {
         <p>
           <b>Flipendo</b> Knocks objects and creatures backwards.
         </p>
-        <p>
+        {/* <p>
           <b>Furnunculus</b> Covers the target in boils (or pimples).
-        </p>
+        </p> */}
         <p>
           <b>Ferula</b>Conjures up bandages and wraps them around a wound,
           splinting any broken bones.
