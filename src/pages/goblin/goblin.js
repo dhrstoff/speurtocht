@@ -222,7 +222,6 @@ const SadGoblin = () => {
           spellCheck="false"
           onKeyDown={handleKeyDown}
         />
-        {goblinState}
 
         <h1>Spells</h1>
         <p>
