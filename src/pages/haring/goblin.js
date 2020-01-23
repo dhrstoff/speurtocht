@@ -197,13 +197,13 @@ const SadGoblin = () => {
 
   return (
     <Layout>
-      <SEO title="Sad Goblin" />
+      <SEO title="Cute Goblin" />
       <div className="goblin">
         <p className="narrative">
           The book flips in the air and lands back on its back!
         </p>
         <p className="narrative">
-          On the next page you see a cute small goblin. He's seems to be
+          On the next page you see a cute small goblin. He seems to be
           actively ignoring you. Maybe you can get the little fella's attention
           with some handy magic by writing it on the dotted line!
         </p>
@@ -239,11 +239,11 @@ const SadGoblin = () => {
           <b>Furnunculus</b> Covers the target in boils (or pimples).
         </p> */}
         <p>
-          <b>Ferula</b>Conjures up bandages and wraps them around a wound,
+          <b>Ferula</b> Conjures up bandages and wraps them around a wound,
           splinting any broken bones.
         </p>
         <p>
-          <b>Relashio</b>The Revulsion Jinx (Relashio) is a jinx that forces the
+          <b>Relashio</b> The Revulsion Jinx (Relashio) is a jinx that forces the
           target to release its grip on whatever it is holding. It works on both
           living and inanimate targets, so long as it is holding something.
         </p>

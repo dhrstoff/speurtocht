@@ -67,7 +67,7 @@ const globalOptionList = [
   },
   {
     name: "goblin",
-    url: "goblin/goblin",
+    url: "haring/goblin",
   },
 ]
 
