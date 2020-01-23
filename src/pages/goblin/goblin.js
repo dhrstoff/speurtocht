@@ -16,11 +16,11 @@ const inputOptions = [
     options: [
       {
         input: "glacius",
-        effect: "glaciusFix",
+        effect: "glacius",
       },
       {
         input: "incendio",
-        effect: "incendioFix",
+        effect: "incendio",
       },
       {
         input: "ferula",
@@ -41,16 +41,15 @@ const inputOptions = [
     options: [
       {
         input: "incendio",
-        effect: "incendio",
+        effect: "incendioFix",
       },
     ],
   },
   {
     id: "glaciusFix",
     startText:
-      "That did the trick! He's laying shivering on the flow but it seems you have his attention now!",
-    negativeText:
-      "That didn't work. Atleast his sad face can't go down any more due to all the ice..",
+      "That did the trick! He's laying shivering on the floor but you certainly have his attention now!",
+    negativeText: `The little goblin cusses at you, maybe you need him to forget this ever happened`,
     options: [
       {
         input: "glacius",
@@ -73,8 +72,8 @@ const inputOptions = [
     negativeText: `The little goblin let's out a scream that could curdle blood.`,
     options: [
       {
-        input: "incendio",
-        effect: "incendioFix",
+        input: "glacius",
+        effect: "glaciusFix",
       },
     ],
   },
@@ -82,7 +81,7 @@ const inputOptions = [
     id: "incendioFix",
     startText:
       "The fire bolt melts the ice block away. He seems more attentive now!",
-    negativeText: `The little goblin cusses at you`,
+    negativeText: `The little goblin cusses at you, maybe you need him to forget this ever happened`,
     options: [
       {
         input: "incendio",
@@ -144,7 +143,7 @@ const inputOptions = [
     startText:
       "A blank look comes over the face of the little goblin. He stares at you curiously.",
     negativeText:
-      "The little gobln hickups. It seems a snot bell is forming under his nose. He is staring at you now.",
+      "The little goblin hickups. It seems a snot bell is forming under his nose. He is staring at you now. Maybe you should cheer him up or something..",
     options: [
       {
         input: "orchideous",
