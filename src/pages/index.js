@@ -10,12 +10,15 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h2>To whomever that reads this;</h2>
+      <h1>Welcome to this special lesson of Muggle Studies</h1>
       <p>
-        I've run out of time. I know the next step will be imprisonment so I
-        won't be able to finish it.
+        Your goal will be to ..
       </p>
-      <p>But you might.</p>
+      <h2>The rules</h2>
+      <ul>
+        <li>one</li>
+        <li>one</li>
+      </ul>
       <p>
         Use the <b>magic</b> word.
       </p>

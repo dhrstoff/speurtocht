@@ -26,13 +26,15 @@ const WitchProfile = ({ witchData }) => {
       <div className="witch-profile-intro">
         <div className="profile-intro-text">
           <h1>{witchData.name}</h1>
+          <h2>Description</h2>
+          <i>Note: Might not be fully accurate.</i>
           <p>{witchData.description}</p>
         </div>
-        <Img
+        {/* <Img
           className="profile-img"
           fixed={data.fileName.childImageSharp.fixed}
           alt=""
-        />
+        /> */}
       </div>
       <div className="spell-list">
         <h2>Spell{witchData.spells.length > 1 ? "s" : ""}</h2>
