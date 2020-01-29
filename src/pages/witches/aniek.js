@@ -5,13 +5,15 @@ import SEO from "../../components/seo"
 import WitchProfile from "../../components/witchProfile"
 import MagicInput from "../../components/magic-input"
 
+import image from "../../images/witches/aniek.png"
+
 const witchData = {
   name: "Aniek",
   description: `
   Aniek is an extremely quirky girl, with a serene disposition and many eccentric beliefs and qualities. She is a complete nonconformist; she lacks self-consciousness and is not afraid to show who she truly is. Aniek is also intelligent and unusually perceptive.
   `,
-  image: "Aniek.png",
-  spells: ["incendio", "glacius"],
+  image: image,
+  spells: ["flipendo"],
 }
 
 const Aniek = () => (

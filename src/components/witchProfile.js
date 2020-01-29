@@ -7,18 +7,6 @@ import { filterSpells } from "../services/spells"
 import "./witchProfile.scss"
 
 const WitchProfile = ({ witchData }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      fileName: file(relativePath: { eq: "jolien.png" }) {
-        childImageSharp {
-          fixed(width: 150, height: 150) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `)
-
   const mySpells = filterSpells(witchData.spells)
 
   return (
@@ -27,8 +15,11 @@ const WitchProfile = ({ witchData }) => {
         <div className="profile-intro-text">
           <h1>{witchData.name}</h1>
           <h2>Description</h2>
-          <i>Note: Might not be fully accurate.</i>
+          <i>Note: Might not at all accurate.</i>
           <p>{witchData.description}</p>
+        </div>
+        <div className="profile-img">
+          <img src={witchData.image} alt={witchData.name} />
         </div>
         {/* <Img
           className="profile-img"

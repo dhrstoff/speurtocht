@@ -14,6 +14,7 @@ const IndexPage = () => {
       <p>
         Your goal will be to ..
       </p>
+      <p>If you're ever stuck do reach out to Professor Zagabini.</p>
       <h2>The rules</h2>
       <ul>
         <li>one</li>

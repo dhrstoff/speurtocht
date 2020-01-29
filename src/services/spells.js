@@ -29,6 +29,10 @@ export const spells = [
     name: "Incendio",
     description: "Produces fire.",
   },
+  {
+    name: "Alohomora",
+    description: "Unlocks doors and other objects. It can also unlock doors that have been sealed with a Locking Spell, although it is possible to bewitch doors to become unaffected by this spell."
+  }
 ]
 
 export function filterSpells(inputSpells = []) {
