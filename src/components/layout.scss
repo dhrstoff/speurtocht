@@ -626,7 +626,22 @@ pre tt:after {
   src: url("../fonts/Caveat-Regular.ttf");
 }
 
-p, li, span {
+p,
+li,
+span {
   font-size: 1.4rem;
   line-height: 1.8rem;
+}
+
+.profile-img {
+  // margin-left: 1.45rem;
+  min-width: 150px;
+  max-width: 320px;
+  float: right;
+
+  img {
+    border: solid #911191;
+    box-shadow: 0 0px 5px #911192;
+    border-radius: 3px;
+  }
 }

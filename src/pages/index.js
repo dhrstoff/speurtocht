@@ -11,17 +11,12 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <h1>Welcome to this special lesson of Muggle Studies</h1>
-      <p>
-        Your goal will be to ..
-      </p>
+
+      <p>This lovely magical book will help you in your quest!</p>
       <p>If you're ever stuck do reach out to Professor Zagabini.</p>
-      <h2>The rules</h2>
-      <ul>
-        <li>one</li>
-        <li>one</li>
-      </ul>
       <p>
-        Use the <b>magic</b> word.
+        To get this thing started, please use <b>the magic word</b> in the
+        golden bar below.
       </p>
       <MagicInput />
     </Layout>

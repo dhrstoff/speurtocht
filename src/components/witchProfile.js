@@ -1,10 +1,8 @@
 // import { Link } from "gatsby"
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
 import { filterSpells } from "../services/spells"
 
-import "./witchProfile.scss"
+// import "./witchProfile.scss"
 
 const WitchProfile = ({ witchData }) => {
   const mySpells = filterSpells(witchData.spells)
@@ -12,21 +10,14 @@ const WitchProfile = ({ witchData }) => {
   return (
     <div className="witch-profile">
       <div className="witch-profile-intro">
-        <div className="profile-intro-text">
-          <h1>{witchData.name}</h1>
-          <h2>Description</h2>
-          <i>Note: Might not at all accurate.</i>
-          <p>{witchData.description}</p>
-        </div>
         <div className="profile-img">
           <img src={witchData.image} alt={witchData.name} />
         </div>
-        {/* <Img
-          className="profile-img"
-          fixed={data.fileName.childImageSharp.fixed}
-          alt=""
-        /> */}
+        <h1>{witchData.name}</h1>
       </div>
+      <i>Note: Might not be at all accurate.</i>
+      {/* <h2>Description</h2> */}
+      <p>{witchData.description}</p>
       <div className="spell-list">
         <h2>Spell{witchData.spells.length > 1 ? "s" : ""}</h2>
         {mySpells.map(spell => {

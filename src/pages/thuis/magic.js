@@ -13,26 +13,29 @@ const inputOptions = [
   },
   {
     name: "wind",
-    url: "thuis/poef"
-  }, {
+    url: "thuis/poef",
+  },
+  {
     name: "earth",
-    url: "thuis/grondig"
+    url: "thuis/grondig",
   },
   {
     name: "water",
-    url: "thuis/nat"
-  }
+    url: "thuis/nat",
+  },
 ]
-
 
 const Magic = () => {
   return (
     <Layout>
       <SEO title="Magic" />
-      <h2>
-        The book flips open and lands on this page...
-      </h2>
-      <p>In the margins you see four strange words written from top to bottom..</p>
+      <h2>The book starts flipping through pages and lands on this one.</h2>
+
+      <p>
+        Let's test your code cracking skills! Below are four magical words that
+        you need to decode and enter in the gold bar. Good luck!
+      </p>
+
       <ol>
         <li>ehqd</li>
         <li>uglb</li>
