@@ -1,19 +1,21 @@
 import React from "react"
-// import { Link } from "gatsby"
-
-import Layout from "../../components/layout"
 import SEO from "../../components/seo"
+import image from "../../images/thuis33.jpg"
 
-import MagicInput from "../../components/magic-input"
-
-const Nat = () => {
+const Water = () => {
   return (
-    <Layout>
-      <SEO title="Nat" />
-      <h1>Nat!</h1>
-      <MagicInput />
-    </Layout>
+    <div>
+      <SEO title="Water" />
+      <h1 style={{ margin: "1rem" }}>The next location</h1>
+      <img
+        src={image}
+        style={{
+          minWidth: "100vw",
+        }}
+        alt="Water"
+      />
+    </div>
   )
 }
 
-export default Nat
+export default Water

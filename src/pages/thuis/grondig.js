@@ -1,18 +1,20 @@
 import React from "react"
-// import { Link } from "gatsby"
-
-import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-
-import MagicInput from "../../components/magic-input"
+import image from "../../images/thuis22.jpg"
 
 const Earth = () => {
   return (
-    <Layout>
+    <div>
       <SEO title="Earth" />
-      <h1>Earth!</h1>
-      <MagicInput />
-    </Layout>
+      <h1 style={{ margin: "1rem" }}>To go to</h1>
+      <img
+        src={image}
+        style={{
+          minWidth: "100vw",
+        }}
+        alt="Earth"
+      />
+    </div>
   )
 }
 
