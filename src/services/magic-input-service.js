@@ -69,6 +69,10 @@ const globalOptionList = [
     name: "goblin",
     url: "haring/goblin",
   },
+  {
+    name: "rose",
+    url: "brug/rose"
+  }
 ]
 
 export function magic(inputValue, optionList = []) {
