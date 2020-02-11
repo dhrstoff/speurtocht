@@ -59,6 +59,10 @@ const globalOptionList = [
     url: "haring/goblin",
   },
   {
+    name: "risky",
+    url: "haring/risky",
+  },
+  {
     name: "lies",
     url: "underconstruction/wordList",
   },
