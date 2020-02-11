@@ -39,7 +39,7 @@ const MagicInput = ({ spells }) => {
         onChange={e => setInput(e.target.value)}
         placeholder=""
         spellCheck="false"
-        autocomplete="off"
+        autoComplete="off"
         onKeyDown={handleKeyDown}
       />
       <button onClick={() => processInput(input)} className="gold-button">

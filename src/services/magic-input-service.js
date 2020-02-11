@@ -2,8 +2,8 @@ import { navigate } from "gatsby"
 
 const globalOptionList = [
   {
-    name: "magic",
-    url: "thuis/magic"
+    name: "please",
+    url: "thuis/please",
   },
   {
     name: "jolien",
@@ -39,40 +39,37 @@ const globalOptionList = [
   },
   {
     name: "cauldron",
-    url: null,
+    url: "brug/cauldron",
   },
-  {
-    name: "love",
-    url: null,
-  },
-  {
-    name: "tooth",
-    url: null,
-  },
-  {
-    name: "parceltongue",
-    url: null,
-  },
+
   {
     name: "bubble",
-    url: null,
+    url: "brug/bubble",
+  },
+  {
+    name: "rose",
+    url: "brug/rose",
   },
   {
     name: "alohomora",
     url: "spells/alohomora",
   },
   {
-    name: "lies",
-    url: "underconstruction/wordList",
-  },
-  {
     name: "goblin",
     url: "haring/goblin",
   },
   {
-    name: "rose",
-    url: "brug/rose"
-  }
+    name: "lies",
+    url: "underconstruction/wordList",
+  },
+  {
+    name: "tooth",
+    url: "underconstruction/tooth",
+  },
+  {
+    name: "parceltongue",
+    url: "underconstruction/parceltongue",
+  },
 ]
 
 export function magic(inputValue, optionList = []) {
@@ -95,4 +92,4 @@ export function magic(inputValue, optionList = []) {
       return false
     }
   }
-} 
+}

@@ -25,10 +25,10 @@ const inputOptions = [
   },
 ]
 
-const Magic = () => {
+const Please = () => {
   return (
     <Layout>
-      <SEO title="Magic" />
+      <SEO title="Please" />
       <h2>The book starts flipping through pages and lands on this one.</h2>
 
       <p>
@@ -47,4 +47,4 @@ const Magic = () => {
   )
 }
 
-export default Magic
+export default Please
