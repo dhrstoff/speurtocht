@@ -199,7 +199,7 @@ const SadGoblin = () => {
 
   return (
     <Layout>
-      <SEO title="Cute Goblin" />
+      <SEO title="Goblin" />
       <div className="goblin">
         <p className="narrative">
           The book flips in the air and lands back on its back!
