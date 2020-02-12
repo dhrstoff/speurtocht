@@ -153,7 +153,9 @@ const inputOptions = [
   },
   {
     id: "orchideous",
-    startText: "Hooray! You've won!",
+    startText:
+      'The little goblin looks up. His small face starts to contort and large tears start to appear in his eyes. "Dat wash the niecest thin any has ever done vor me" he says as he hugs the flowers. Guess that worked! "Te nest cloo vor yoo is risky!" he drivels.',
+    negativeText: "The little goblin hugs the flowers you gave him. \"I luv yoo\" he says. Let's move on before this gets even more awkward and he finds out the flowers will not last forever.",
     options: [],
   },
 ]
@@ -203,9 +205,9 @@ const SadGoblin = () => {
           The book flips in the air and lands back on its back!
         </p>
         <p className="narrative">
-          On the next page you see a cute small goblin. He seems to be
-          actively ignoring you. Maybe you can get the little fella's attention
-          with some handy magic by writing it on the dotted line!
+          On the next page you see a cute small goblin. He seems to be actively
+          ignoring you. Maybe you can get the little fella's attention with some
+          handy magic by writing it on the dotted line!
         </p>
         <br />
 
@@ -221,41 +223,7 @@ const SadGoblin = () => {
           spellCheck="false"
           onKeyDown={handleKeyDown}
         />
-
-        <h1>Spells</h1>
-        <p>
-          <i>In the eventual game these will be spread out over the players.</i>
-        </p>
-        <p>
-          <b>Glacius</b> Freezes the target with icy-cold air.
-        </p>
-        <p>
-          <b>Orchideous</b> Conjures a bouquet of flowers.
-        </p>
-        <p>
-          <b>Flipendo</b> Knocks objects and creatures backwards.
-        </p>
-        {/* <p>
-          <b>Furnunculus</b> Covers the target in boils (or pimples).
-        </p> */}
-        <p>
-          <b>Ferula</b> Conjures up bandages and wraps them around a wound,
-          splinting any broken bones.
-        </p>
-        <p>
-          <b>Relashio</b> The Revulsion Jinx (Relashio) is a jinx that forces the
-          target to release its grip on whatever it is holding. It works on both
-          living and inanimate targets, so long as it is holding something.
-        </p>
-        <p>
-          <b>Obliviate</b> Erase specific memories.
-        </p>
-        <p>
-          <b>Incendio</b> Produces fire.
-        </p>
       </div>
-
-      {/* <MagicInput spells={inputOptions} /> */}
     </Layout>
   )
 }
