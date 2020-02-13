@@ -1,8 +1,6 @@
 import React from "react"
-
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import MagicInput from "../../components/magic-input"
 
 import img1 from "../../images/finale/1.jpg"
 import img2 from "../../images/finale/2.jpg"
