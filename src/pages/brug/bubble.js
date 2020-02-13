@@ -8,7 +8,7 @@ import SEO from "../../components/seo"
 const Bubble = ({ data }) => (
   <Layout>
     <SEO title="Bubble" />
-    <Img fluid={data.fileName.childImageSharp.fluid} alt="" />
+    <Img fluid={data.fileName.childImageSharp.fluid} alt="Bubble" />
   </Layout>
 )
 

@@ -68,7 +68,11 @@ const globalOptionList = [
   },
   {
     name: "tooth",
-    url: "underconstruction/tooth",
+    url: "402/tooth",
+  },
+  {
+    name: "witching",
+    url: "402/witching",
   },
   {
     name: "parceltongue",

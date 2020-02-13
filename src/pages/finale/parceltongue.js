@@ -6,7 +6,7 @@ import SEO from "../../components/seo"
 const Parceltongue = () => (
   <Layout>
     <SEO title="Parceltongue" />
-    <h1>O</h1>
+    {/* TODO add glyph text */}
   </Layout>
 )
 
