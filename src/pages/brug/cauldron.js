@@ -14,6 +14,7 @@ const Cauldron = ({ data }) => (
         width: "500px",
         display: "block",
       }}
+      alt="pigpen"
     />
   </Layout>
 )
