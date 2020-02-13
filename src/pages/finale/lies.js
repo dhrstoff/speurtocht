@@ -7,7 +7,7 @@ import MagicInput from "../../components/magic-input"
 const inputOptions = [
   {
     name: "stories",
-    url: "underconstruction/stories",
+    url: "finale/stories",
   },
 ]
 
@@ -28,9 +28,9 @@ const IMustNotTellLies = () => (
   <Layout>
     <SEO title="I must not tell lies." />
     <div>
-      {createText(23)}
+      {createText(33)}
       <span>I must tell stories. </span>
-      {createText(16)}
+      {createText(26)}
     </div>
     <MagicInput spells={inputOptions} />
   </Layout>

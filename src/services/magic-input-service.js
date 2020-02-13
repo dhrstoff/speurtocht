@@ -64,7 +64,11 @@ const globalOptionList = [
   },
   {
     name: "lies",
-    url: "underconstruction/wordList",
+    url: "finale/lies",
+  },
+  {
+    name: "stories",
+    url: "finale/stories",
   },
   {
     name: "tooth",
@@ -76,7 +80,7 @@ const globalOptionList = [
   },
   {
     name: "parceltongue",
-    url: "underconstruction/parceltongue",
+    url: "finale/parceltongue",
   },
 ]
 

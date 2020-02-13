@@ -17,9 +17,11 @@ const Witching = ({data}) => (
       has to do with the symbol below. Good luck!
     </p>
     <Img style={{
-        maxWidth: "300px",
+        maxWidth: "200px",
         margin: "0 auto",
-        marginBottom: "2rem"
+        marginBottom: "2rem",
+        filter: "drop-shadow(2px 4px 6px #911191)"
+
     }}fluid={data.fileName.childImageSharp.fluid} alt="haring" />
     <p>
       And to keep you entertained during your walk I have another riddle for
