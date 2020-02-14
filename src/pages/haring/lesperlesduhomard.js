@@ -30,7 +30,7 @@ const Perles = () => (
       So I hope they have some nice lemonades that you can drink.
     </p>
     <p>
-      While wetting your whistles and shoving some food in them it's time for
+      While wetting your whistles and shoving food in them it's time for
       your next task: Interrogation! There's this pesky <b>goblin</b> who has
       the next hint for you. Good luck!
     </p>
