@@ -6,7 +6,7 @@ const Earth = () => {
   return (
     <div>
       <SEO title="Earth" />
-      <h1 style={{ margin: "1rem" }}>To go to</h1>
+      <h1 style={{ margin: "1rem" }}>And find all 4</h1>
       <img
         src={image}
         style={{
