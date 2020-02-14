@@ -26,7 +26,7 @@ const Perles = () => (
       muggles.
     </p>
     <p>
-      Unfortunately you girls are not old enough to drink all these fancy beer.
+      Unfortunately you girls are not old enough to drink all these fancy beers.
       So I hope they have some nice lemonades that you can drink.
     </p>
     <p>
