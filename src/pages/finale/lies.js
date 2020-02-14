@@ -28,7 +28,7 @@ const IMustNotTellLies = () => (
   <Layout>
     <SEO title="I must not tell lies." />
     <div>
-      {createText(33)}
+      {createText(43)}
       <span>I must tell stories. </span>
       {createText(26)}
     </div>
