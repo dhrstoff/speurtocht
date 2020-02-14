@@ -9,7 +9,7 @@ const Tooth = () => (
     <p>
       I hope you have settled in at this point. Remember the cash I gave you thunderbuns earlier? Well now is the time to make good use of it!
     </p>
-    <p>After that you need to find the {/* TODO bier naam */}. Once you do you'll have your next keyword!</p>
+    <p>After that you need to find the Lobster. Once you do you'll have your next keyword!</p>
   </Layout>
 )
 

@@ -38,6 +38,10 @@ const globalOptionList = [
     url: "witches/roos",
   },
   {
+    name: "zagabini",
+    url: "zagabini",
+  },
+  {
     name: "cauldron",
     url: "brug/cauldron",
   },
@@ -53,6 +57,11 @@ const globalOptionList = [
   {
     name: "alohomora",
     url: "spells/alohomora",
+  },
+  
+  {
+    name: "lesperlesduhomard",
+    url: "haring/lesperlesduhomard",
   },
   {
     name: "goblin",
